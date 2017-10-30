@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @lobour.name %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @lobour.age %>
+</p>
+
+<p>
+  <strong>Emp no:</strong>
+  <%= @lobour.emp_no %>
+</p>
+
+<%= link_to 'Edit', edit_lobour_path(@lobour) %> |
+<%= link_to 'Back', lobours_path %>

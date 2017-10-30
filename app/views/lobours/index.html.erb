@@ -1,0 +1,29 @@
+<h1>Listing lobours</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Emp no</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @lobours.each do |lobour| %>
+      <tr>
+        <td><%= lobour.name %></td>
+        <td><%= lobour.age %></td>
+        <td><%= lobour.emp_no %></td>
+        <td><%= link_to 'Show', lobour %></td>
+        <td><%= link_to 'Edit', edit_lobour_path(lobour) %></td>
+        <td><%= link_to 'Destroy', lobour, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Lobour', new_lobour_path %>
